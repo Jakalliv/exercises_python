@@ -32,5 +32,8 @@ bank_of_america = Bank()
 bank_of_america.create_account(account1.account_name, account1.account_number, account1.balance)
 account = bank_of_america.get_account("123456789")
 
+print("Bank of America Accounts:")
+for acc in bank_of_america.accounts.values():
+    print(f"Account Name: {acc.account_name}, Account Number: {acc.account_number}, Balance: ${acc.balance}")
 if account:
     print(f"Account Name: {account.account_name}, Account Number: {account.account_number}, Balance: ${account.balance}")
