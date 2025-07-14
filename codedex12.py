@@ -1,20 +1,15 @@
-# Define the Higher-order function 
-def apply_operation(operation, numbers):
-  result = []
-  for num in numbers:
-    result.append(operation(num))
-  return result
+def translator(language):
+    translations = {
+  'spanish': {'hello': 'hola', 'goodbye': 'adiós', 'thank you': 'gracias'},
+  'french': {'hello': 'bonjour', 'goodbye': 'au revoir', 'thank you': 'merci'},
+  'italian': {'hello': 'ciao', 'goodbye': 'arrivederci', 'thank you': 'grazie'}
+}
+    return translations.get(language)
 
-# Example operation
-def double(x):
-  return x * 2
+def translate_word(language, word):
+    return language.get(word)
 
-# List of numbers
-numbers_list = [1, 2, 3, 4, 5]
+x = translate_word(translator("italian"), "hello")
 
-# Using the higher-order function
-doubled_numbers = apply_operation(double, numbers_list)
-
-# Displaying the outcomes
-print('Original Numbers:', numbers_list)
-print('Doubled Numbers:', doubled_numbers)
+if __name__ == "__main__":
+    print(x)
