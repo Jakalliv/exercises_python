@@ -3,6 +3,7 @@ from coffee_menu import CoffeeMenu
 
 
 
+
 class TestCoffeeMenu(unittest.TestCase):
     def setUp(self):
         self.menu = CoffeeMenu().menu
