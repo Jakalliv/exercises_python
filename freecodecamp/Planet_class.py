@@ -9,14 +9,19 @@ class Planet:
             raise ValueError("name, planet_type, and star must be non-empty strings")
 
     def orbit(self):
-        return f"{self.name} is orbiting around {self.star}..."
+        return f"{self.name} is orbitihttps://www.freecodecamp.org/learn/python-v9/workshop-email-simulator/step-1ng around {self.star}..."
     def __str__(self):
         return f"Planet: {self.name} | Type: {self.planet_type} | Star: {self.star}"
     
 
 planet1 = Planet("Jupiter","Gaseous", "Sol")
 planet2 = Planet("Terra","Solid", "Sol")
-planet2 = Planet("Mercury","Solid", "Sol")
+planet3 = Planet("Mercury","Solid", "Sol")
+
+
+print(planet1.orbit)
+print(planet2.orbit)
+print(planet3.orbit)
 
 
 
