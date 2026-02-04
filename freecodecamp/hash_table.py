@@ -10,6 +10,19 @@ class HashTable:
             self.collection[self.hash(key)][key] = value
         else:
             self.collection[self.hash(key)] = {key: value}
+    
+    def remove(self, key):
+        if self.hash(key) in self.collection:
+            self.collection.pop(self.hash(key))
+        else:
+            pass
+    
+    def lookup(self, key):
+        if self.hash(key) in self.collection:
+            return self.collection[self.hash(key)][key]
+        else:
+            return None
+        
         
 
 variable = HashTable()
