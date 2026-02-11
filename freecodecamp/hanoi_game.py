@@ -1,2 +1,3 @@
 def hanoi_solver(x: int):
-    hanoi_towers = [list(range(5,0,-1)), [], []]
+
+    hanoi_towers = [list(range(x,0,-1)), [], []]
